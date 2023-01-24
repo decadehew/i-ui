@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sys-font-stack: 'SF Pro Text', -apple-system, 'Inter', 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-family: var(--sys-font-stack);
+  height: 100%;
+  background-color: white;
+}

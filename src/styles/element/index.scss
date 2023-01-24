@@ -1,0 +1,38 @@
+$--colors: (
+  "primary": (
+    "base": #000000,
+  ),
+  "success": (
+    "base": #3b44ff,
+  ),
+  "warning": (
+    "base": #f2711c,
+  ),
+  "danger": (
+    "base": #db2828,
+  ),
+  "error": (
+    "base": #db2828,
+  ),
+  "info": (
+    "base": #42b8dd,
+  ),
+);
+
+// You should use them in scss, because we calculate it by sass.
+// comment next lines to use default color
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  // do not use same name, it will override.
+  $colors: $--colors,
+  $table: (
+    'header-text-color': #000,
+    'text-color': 'purple'
+  ),
+  $button-padding-horizontal: ("default": 50px)
+);
+
+// 導出客製化組件樣式 (覆蓋原組件樣式)
+// 備註：原本在入口文件(main.js|ts)導出，使用自動按需導入方式，導致這些客製化組件樣式優先級很低，所以才會在這裡處理
+// 結果：這種方式也不行，在 dev 環境導致到每個 css 文件會有此樣式
+@import './table.scss';
+@import './button.scss';

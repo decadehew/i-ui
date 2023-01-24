@@ -1,0 +1,10 @@
+.el-table {
+  // --el-table-text-color: #f3f5f9;
+  // color: var(--el-table-header-text-color);
+  // color: green;
+  @apply text-red-800;
+
+  .el-table__cell {
+    padding: 10px 0;
+  }
+}
